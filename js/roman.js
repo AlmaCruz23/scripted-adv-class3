@@ -18,12 +18,78 @@ $(function() {
 
   function convertToRomanNumeral(number) {
     console.log("Number = " + number);
-    var output = "";
+    // var output = "";
+  //   if (number == "1") {
+  //     output = "I";
+  // } else if (number == "2") {
+  //   output = "II";
+  // } else if (number == "3") {
+  //   output = "III";
+  // } else if (number == "4") {
+  //   output = "IV";
+  // }else if (number == "5") {
+  //   output = "V";
+  // }else if (number == "6") {
+  //   output = "VI";
+  // }else if (number == "7") {
+  //   output = "VII";
+  // }else if (number == "8") {
+  //   output = "VIII";
+  // }else if (number == "9") {
+  //   output = "IX";
+  // } else if (number == "10") {
+  //   output = "X";
+  // } else { 
+  //     output = ":(";
+  // }
+    
+  // return output;
+  
+  var output="";
+
+  while (number > 0) {
+    if (numer >= 100) {
+      output += "c";
+      number -= 100;
+
+    }
+    else if (number > 90) {
+      output += "XC"
+      number -= 90;
+    }
+    else if (number >= 50) {
+      output += "L";
+      number -= 50;
+    }
+    else if (number >= 40) {
+      output += "XL";
+      number -= 40;
+    }
+    else if (number >= 10) {
+      output += "X";
+      number -= 10;
+    }
+    else if (number >= 9) {
+      output += "IX";
+      number -= 9;
+    }
+    else if (number >= 5) {
+      output += "V";
+      number -= 5;
+    }
+    else if (number >= 4) {
+      output += "IV";
+      number -= 4;
+    }
+    else if (number >= 1) {
+      output += "I";
+      number -= 1;
+    }
     return output;
   }
-
-
-
+  }
+  
+  
   //-----------------------------------------------------------------------------------
   // Convert the number input when the button is clicked
 
